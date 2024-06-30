@@ -1,0 +1,18 @@
+.yvl { /* Стилизация увлечений */
+    background-color: red; /* Устанавливаем красный цвет фона, */
+    width: 100px; /*размеры 100x100 пикселей*/
+    height: 100px;
+    text-align: left;/*и выравнивание по левому краю для класса ".yvl" */
+}
+.fio { /* Стилизация ФИО */
+    color:black;/* Устанавливаем черный цвет текста, */
+    text-align: right; /*выравнивание по правому краю 
+    и зачеркивание для класса ".fio" */
+    text-decoration: line-through; /* Приоритет стилей для класса 
+    ".fio" над общими стилями для <p> */
+}     
+p::first-letter {
+    font-size: 19pt;
+    color: red;
+    text-decoration: line-through;
+}

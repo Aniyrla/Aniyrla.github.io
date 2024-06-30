@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+<title>Лабы10-12</title>
+<script src="sc.js" defer></script>
+<head>
+    <script>
+        function показатьГод() {
+          var сейчас = new Date();
+          var часы = сейчас.getHours();
+          var минуты = сейчас.getMinutes();
+          var секунды = сейчас.getSeconds();
+          alert("Текущее время: " + часы + " часов " + минуты + " минут " + секунды + " секунд");
+        }
+      </script>      
+</head>
+<body>
+    <button onclick="показатьГод()">Показать год</button>
+
+    <script>
+        for (var i = 0; i < 29; i++) {
+          document.write("Фамилия: Юшачкова, Имя: Анна<br>");
+        }
+    </script>
+
+    <script>
+        let arr = [3, 8, 2, 5, 10, 7, 6]; // Исходный массив из 7 целых элементов
+        let evenCount = 0; // Переменная для подсчета четных элементов
+        let maxElement = arr[0]; // Переменная для хранения максимального элемента
+        // Подсчет количества четных элементов и поиск максимального элемента
+        for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenCount++;
+        }
+        if (arr[i] > maxElement) {
+            maxElement = arr[i];
+        }
+        }
+        // Вывод исходного массива
+        document.write("Исходный массив: " + arr.join(", ") + "<br>");
+        // Вывод количества четных элементов и максимального элемента
+        document.write("Количество четных элементов: " + evenCount + "<br>");
+        document.write("Максимальный элемент: " + maxElement + "<br>");
+    </script>
+
+    <h1>Результат:</h1>
+    <p id="result"></p>
+
+    <script>
+        let S1 = "Юшачкова";
+        let S2 = "Огинского";
+        // Определение длины строки S2
+        let lengthOfS2 = S2.length;
+        // Запись строки S1 в обратном порядке
+        let reversedS1 = S1.split('').reverse().join('');
+        // Преобразование строки S2 в нижний регистр
+        let lowerCaseS2 = S2.toLowerCase();
+        // Вывод результатов
+        document.write("Длина строки S2: " + lengthOfS2 + "<br>");
+        document.write("Строка S1 в обратном порядке: " + reversedS1 + "<br>");
+        document.write("Строка S2 в нижнем регистре: " + lowerCaseS2 + "<br>");
+    </script>
+</body>
+</html>

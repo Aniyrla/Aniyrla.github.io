@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Моя страница</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #element3 {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+    <p>Юшачкова Анна Алексеевна</p>
+    <p><a href="https://jut.su">Мой любимый сайт</a></p>
+    
+    <h1> Пример работы с объектом Document и обработки событий</h1>
+    <p>Документ был модифицирован: <span id="modificationTime"></span></p>
+    <button id="checkButton">Дата модификации</button>
+    <p id="result"></p>    
+    <button onclick="izmen_cvet()">Сменить стиль</button>
+    <img id="element3" src="photo.jpg" onclick="removeElement()" width="150px" height="250px" alt="Изображение">
+    <button onclick="getSystemInfo()">Получить информацию</button>
+
+</body>
+<script src="sc.js"></script>
+</html>

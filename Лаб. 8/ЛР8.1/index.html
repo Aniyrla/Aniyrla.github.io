@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css"></link>
+    <title>LR8.1</title>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <h1>Заказ обратного звонка</h1>
+            <button id="close_btn"></button>
+        </div>
+        <div class="main_block">
+            <div class="left_block">
+                <p>Вы можете связатся с нами по телефону:</p>
+                <hr>
+                <h2 id="h1">+7 (978) <span>876-55-345</span></h2>
+                <p>Напоминаем Вам, что наша компания создана в 2000 году и обладает большим опытом в создании данных форм связи</p>
+                <p>Наши приемущества:</p>
+                <ul>
+                    <li>цена;</li>
+                    <li>надежность;</li>
+                    <li>качество.</li>
+                </ul>
+                <p>Заполните форму справа, и наши специалисты свяжутся с вами, чтобы рассказать об особенностях форм связи.</p>
+            </div>
+            <div class="right_block">
+                <p>Или заполните форму ниже</p>
+                <input type="text" placeholder="Ваше имя" class="inp">
+                <input type="tel" placeholder="Ваш номер телефона" class="inp">
+                <p id="p1">выберите время</p>
+
+                <div class="slider">
+                    <div class="sliderValue1">
+                        <span>10:00</span>
+                    </div>
+                    <div class="sliderValue2">
+                        <span>22:00</span>
+                    </div>
+                    <div class="progress">
+
+                    </div>
+                </div>
+                <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="86400" value="20000">
+                    <input type="range" class="range-max" min="0" max="86400" value="70000">
+                </div>
+                <input type="text" placeholder="Ваш комментарий" id="comm">
+                <div class="btn">
+                    <button>Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const rangeInput = document.querySelectorAll(".range-input input"),
+        progress = document.querySelector(".slider .progress");
+
+        let priceGap = 10000;
+
+        rangeInput.forEach(input=>{
+            input.addEventListener("input",e=>{
+                let minVal = parseInt(rangeInput[0].value),
+                maxVal = parseInt(rangeInput[1].value);
+
+                if(maxVal-minVal<priceGap){
+                    if(e.target.className === "range-min"){
+                        rangeInput[0].value=maxVal-priceGap;
+                    }else{
+                        rangeInput[1].value=minVal+priceGap;
+                    }
+                }else{
+                    progress.style.left = (minVal/86400)*100+"%";
+                    progress.style.right = 100-(maxVal/86400)*100+"%";
+                    console.log(rangeInput[0]);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

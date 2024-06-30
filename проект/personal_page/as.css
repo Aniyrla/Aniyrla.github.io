@@ -1,0 +1,7 @@
+body { /* Общие стили для страницы */
+    background-image: url('cd.png'); /* Устанавливаем фоновое изображение,*/    
+    background-repeat: repeat-x;/*повторение по горизонтали,*/
+    font-family: 'Times New Roman', serif;/*шрифт 'Times New Roman',*/
+    font-size: 16px;/*размер шрифта 16 пикселей*/
+    color: blue;/*и синий цвет текста для всего тела страницы */
+}
